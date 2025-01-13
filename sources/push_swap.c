@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/13 14:43:19 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/13 14:55:54 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int check_arg(char *str)
 int    main(int argc, char **argv)
 {
     t_stack_data    a;
-    // t_stack_data    b;
+    t_stack_data    b;
     int i;
     int j;
 
@@ -71,17 +71,20 @@ int    main(int argc, char **argv)
     i = 0;
     j = 1;
     a.tab = malloc(sizeof(int) * (argc - 1));
+    b.tab = malloc(sizeof(int) * (argc - 1));
     while (j < argc)
     {
         a.tab[i] = atoi(argv[j]);
         i++;
         j++;
     }
-    // i = 0;
-    // while (i < (argc - 1))
-    // {
-    //     printf("tab %d\n", a.tab[i]);
-    //     i++;
-    // }
+    i = 0;
+    while (i < (argc - 1))
+    {
+        printf("tab %d\n", a.tab[i]);
+        i++;
+    }
+    a.int_quantity = argc - 1;
+    printf("sa: %d\n", sa(&a, &b));
     return (0);
 }

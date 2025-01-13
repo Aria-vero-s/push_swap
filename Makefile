@@ -7,7 +7,7 @@ CFLAGS = -Wall -Wextra -Werror -ggdb3
 
 # LIBS = 
 
-SRCS = sources/push_swap.c
+SRCS = sources/push_swap.c sources/operations.c
 
 OBJS = $(SRCS:.c=.o)
 
