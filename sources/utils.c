@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 14:45:41 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/13 14:55:49 by asaulnie         ###   ########.fr       */
+/*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
+/*   Updated: 2025/01/15 13:28:30 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int sa(t_stack_data *a, t_stack_data *b)
+void    error_exit(const char *msg)
 {
-    int i;
-
-    i = 0;
-    while (i < a->int_quantity)
-    {
-        printf("tab de sa %d\n", a->tab[i]);
-        i++;
-    }
-    printf("2e sa%d\n", a->tab[0]);
-    printf("3e sa%d\n", b->tab[0]);
-    return (i);
+    write(2, msg, strlen(msg));
+    write(2, "\n", 1);
+    exit(EXIT_FAILURE);
 }
