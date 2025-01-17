@@ -6,7 +6,7 @@
 /*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/15 13:30:33 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/17 22:24:46 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,12 @@ int     is_empty(t_stack *stack);
 void    print_stack(t_stack *stack);
 
 // utils.c
-void    error_exit(const char *msg);
+void    error_exit(char *msg);
+
+// push_swap1.c
+void	sa(t_stack *stack);
+void	ra(t_stack *stack);
+void	rra(t_stack *stack);
+void	sort_three(t_stack *stack);
 
 #endif

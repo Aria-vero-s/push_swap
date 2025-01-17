@@ -6,15 +6,14 @@
 /*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/15 13:28:30 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/17 22:25:44 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    error_exit(const char *msg)
+void	error_exit(char *msg)
 {
-    write(2, msg, strlen(msg));
-    write(2, "\n", 1);
-    exit(EXIT_FAILURE);
+	printf("%s\n", msg);
+	exit (1);
 }

@@ -6,13 +6,13 @@
 /*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/15 13:29:34 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/17 22:24:50 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_valid_int(const char *str)
+static int	is_valid_int(char *str)
 {
 	long	num;
 	int		sign;
