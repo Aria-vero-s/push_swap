@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   operations.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/18 19:55:57 by asaulnie         ###   ########.fr       */
+/*   Created: 2025/01/18 19:58:52 by asaulnie          #+#    #+#             */
+/*   Updated: 2025/01/18 19:59:55 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	error_exit(char *msg)
+void	pb(t_stack *stack_a, t_stack *stack_b)
 {
-	printf("%s\n", msg);
-	exit (1);
-}
-
-void	print_before(t_stack *stack_a)
-{
-	t_node	*current;
-
-	current = stack_a->node;
-	while (current != NULL)
-	{
-		printf("before: %d\n", current->value);
-		current = current->next;
-	}
+	if (stack_a->node == NULL)
+		return ;
+	push(stack_b, pop(stack_a));
 }

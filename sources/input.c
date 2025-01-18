@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   input.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/17 22:24:50 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/18 19:49:50 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_stack	*parse_input(int argc, char **argv)
 {
 	t_stack	*stack;
 	int		i;
-	
+
 	i = 1;
 	stack = init_stack();
 	while (i < argc)

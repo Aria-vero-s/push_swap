@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/17 22:22:37 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/18 19:51:48 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	sa(t_stack *stack)
 	t_node	*second;
 
 	if (stack->size < 2)
-		return;
-	first = stack->top;
+		return ;
+	first = stack->node;
 	second = first->next;
 	first->next = second->next;
 	second->next = first;
-	stack->top = second;
+	stack->node = second;
 }
 
 void	ra(t_stack *stack)
@@ -32,12 +32,12 @@ void	ra(t_stack *stack)
 	t_node	*last;
 
 	if (stack->size < 2)
-		return;
-	first = stack->top;
-	last = stack->top;
+		return ;
+	first = stack->node;
+	last = stack->node;
 	while (last->next)
 		last = last->next;
-	stack->top = first->next;
+	stack->node = first->next;
 	first->next = NULL;
 	last->next = first;
 }
@@ -48,17 +48,17 @@ void	rra(t_stack *stack)
 	t_node	*last;
 
 	if (stack->size < 2)
-		return;
+		return ;
 	second_last = NULL;
-	last = stack->top;
+	last = stack->node;
 	while (last->next)
 	{
 		second_last = last;
 		last = last->next;
 	}
 	second_last->next = NULL;
-	last->next = stack->top;
-	stack->top = last;
+	last->next = stack->node;
+	stack->node = last;
 }
 
 void	sort_three(t_stack *stack)
@@ -66,10 +66,10 @@ void	sort_three(t_stack *stack)
 	int	top;
 	int	mid;
 	int	bottom;
-		
-	top = stack->top->value;
-	mid = stack->top->next->value;
-	bottom = stack->top->next->next->value;
+
+	top = stack->node->value;
+	mid = stack->node->next->value;
+	bottom = stack->node->next->next->value;
 	if (top > mid && mid < bottom && top < bottom)
 		sa(stack);
 	else if (top > mid && mid > bottom && top > bottom)
@@ -86,5 +86,4 @@ void	sort_three(t_stack *stack)
 	}
 	else if (top < mid && mid > bottom && top > bottom)
 		rra(stack);
-	print_stack(stack);
 }
