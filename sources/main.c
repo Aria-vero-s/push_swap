@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:06:14 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/18 20:00:13 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/18 20:03:12 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		printf("Error: no stack_a\n");
 		return (1);
 	}
-	print_before(stack_a);
+	// print_before(stack_a);
 	if (stack_a->size == 3)
 		sort_three(stack_a);
 	else if (stack_a->size == 5)

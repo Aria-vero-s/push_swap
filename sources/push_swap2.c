@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:30:10 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/18 19:58:27 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/18 20:04:07 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,24 +73,24 @@ void	push_smallest(t_stack *stack_a, t_stack *stack_b)
 	pb(stack_a, stack_b);
 }
 
-void	push_smallest_to_b(t_stack *a, t_stack *b)
+void	push_smallest_to_b(t_stack *stack_a, t_stack *stack_b)
 {
 	int	smallest;
 	int	position;
 
-	smallest = find_smallest(a);
-	position = find_position(a, smallest);
-	if (position <= (a->size / 2))
+	smallest = find_smallest(stack_a);
+	position = find_position(stack_a, smallest);
+	if (position <= (stack_a->size / 2))
 	{
 		while (position-- > 0)
-			ra(a);
+			ra(stack_a);
 	}
 	else
 	{
-		while (position++ < a->size)
-			rra(a);
+		while (position++ < stack_a->size)
+			rra(stack_a);
 	}
-	pb(a, b);
+	pb(stack_a, stack_b);
 }
 
 void	sort_five(t_stack *a, t_stack *b)
