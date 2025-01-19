@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:22 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/18 19:57:38 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/19 19:53:09 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-t_stack	*init_stack(void)
-{
-	t_stack	*stack;
-
-	stack = (t_stack *)malloc(sizeof(t_stack));
-	if (!stack)
-		error_exit("Error: malloc() failed");
-	stack->node = NULL;
-	stack->size = 0;
-	return (stack);
-}
 
 void	push(t_stack *stack, int value)
 {
@@ -66,7 +54,7 @@ void	print_stack(t_stack *stack)
 	current = stack->node;
 	while (current)
 	{
-		printf("after: %d\n", current->value);
+		printf("%d\n", current->value);
 		current = current->next;
 	}
 }

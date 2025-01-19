@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/18 19:51:48 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/19 20:24:07 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,19 @@ void	sort_three(t_stack *stack)
 	}
 	else if (top < mid && mid > bottom && top > bottom)
 		rra(stack);
+}
+
+void sort_four_or_two(t_stack *a, t_stack *b)
+{
+	if (a->size == 2)
+	{
+		if (a->node->value > a->node->next->value)
+			sa(a);
+	}
+	else if (a->size == 4)
+	{
+		push_smallest_to_b(a, b);
+		sort_three(a);
+		pa(a, b);
+	}
 }

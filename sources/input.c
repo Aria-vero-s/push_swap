@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   input.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/18 19:49:50 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:45:18 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	is_valid_int(char *str)
+int	is_valid_int(char *str)
 {
 	long	num;
 	int		sign;
@@ -36,6 +36,18 @@ static int	is_valid_int(char *str)
 		str++;
 	}
 	return (1);
+}
+
+t_stack	*init_stack(void)
+{
+	t_stack	*stack;
+
+	stack = (t_stack *)malloc(sizeof(t_stack));
+	if (!stack)
+		error_exit("Error: malloc() failed");
+	stack->node = NULL;
+	stack->size = 0;
+	return (stack);
 }
 
 t_stack	*parse_input(int argc, char **argv)

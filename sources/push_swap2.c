@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:30:10 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/18 20:04:07 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/19 19:19:00 by ariane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 int	find_smallest(t_stack *stack)
-{	
+{
 	t_node	*current_node;
 	int		smallest;
 
@@ -29,7 +29,7 @@ int	find_smallest(t_stack *stack)
 }
 
 int	find_position(t_stack *stack, int value)
-{	
+{
 	t_node	*current_node;
 	int		position;
 
