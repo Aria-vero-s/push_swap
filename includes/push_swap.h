@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 11:23:44 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 12:44:18 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,7 @@ void	sort_four_or_two(t_stack *a, t_stack *b);
 
 // push_swap2.c
 int		find_smallest(t_stack *stack);
-int		find_position(t_stack *stack, int value);
-void	push_smallest(t_stack *stack_a, t_stack *stack_b);
+int		find_position(t_stack *stack, int smallest);
 void	sort_five(t_stack *a, t_stack *b);
 void	push_smallest_to_b(t_stack *a, t_stack *b);
 
