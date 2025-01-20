@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 15:24:25 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:03:42 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	pa(t_stack *a, t_stack *b);
 
 // utils.c
 void	error_exit(char *msg);
+void	check_if_duplicates(t_stack *stack_a);
 void	print_before(t_stack *stack_a);
 void	print_stack(t_stack *stack);
 
