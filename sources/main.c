@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:06:14 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/19 20:24:44 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/20 11:54:09 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	main(int argc, char **argv)
 		radix_sort(stack_a, stack_b);
 	print_stack(stack_a);
 	free_stack(stack_a);
+	free_stack(stack_b);
 	return (0);
 }

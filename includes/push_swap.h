@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/19 20:24:42 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/20 11:23:44 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,8 @@ void	push_smallest_to_b(t_stack *a, t_stack *b);
 
 // radix.c
 void	radix_sort(t_stack *a, t_stack *b);
-void	normalize_positions(t_stack *stack);
+void	set_positions(t_stack *stack);
 void	sort_values(int *values, int size);
-void	copy_values_to_array(t_stack *stack, int *values);
+void	values_to_array(t_stack *stack, int *values);
 
 #endif

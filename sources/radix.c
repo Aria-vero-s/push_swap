@@ -1,6 +1,6 @@
 #include "push_swap.h"
 
-void	copy_values_to_array(t_stack *stack, int *values)
+void	values_to_array(t_stack *stack, int *values)
 {
 	t_node	*current;
 	int		i;
@@ -39,7 +39,7 @@ void	sort_values(int *values, int size)
 	}
 }
 
-void	normalize_positions(t_stack *stack)
+void	set_positions(t_stack *stack)
 {
 	int		*values;
 	t_node	*current;
@@ -48,7 +48,7 @@ void	normalize_positions(t_stack *stack)
 	values = malloc(stack->size * sizeof(int));
 	if (!values)
 		exit(1);
-	copy_values_to_array(stack, values);
+	values_to_array(stack, values);
 	sort_values(values, stack->size);
 	current = stack->node;
 	while (current)
@@ -79,7 +79,7 @@ void	radix_sort(t_stack *a, t_stack *b)
 	max_index = a->size - 1;
 	while ((max_index >> max_bits) != 0)
 		max_bits++;
-	normalize_positions(a);
+	set_positions(a);
 	i = 0;
 	while (i < max_bits)
 	{

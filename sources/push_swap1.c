@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap1.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/19 20:24:07 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/20 12:00:01 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	sa(t_stack *stack)
 	first->next = second->next;
 	second->next = first;
 	stack->node = second;
+	printf("sa\n");
 }
 
 void	ra(t_stack *stack)
@@ -40,6 +41,7 @@ void	ra(t_stack *stack)
 	stack->node = first->next;
 	first->next = NULL;
 	last->next = first;
+	printf("ra\n");
 }
 
 void	rra(t_stack *stack)
@@ -59,6 +61,7 @@ void	rra(t_stack *stack)
 	second_last->next = NULL;
 	last->next = stack->node;
 	stack->node = last;
+	printf("rra\n");
 }
 
 void	sort_three(t_stack *stack)
@@ -92,7 +95,7 @@ void sort_four_or_two(t_stack *a, t_stack *b)
 {
 	if (a->size == 2)
 	{
-		if (a->node->value > a->node->next->value)
+		if ((a->node->value) > (a->node->next->value))
 			sa(a);
 	}
 	else if (a->size == 4)

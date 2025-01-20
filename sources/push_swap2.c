@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap2.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:30:10 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/19 19:19:00 by ariane           ###   ########.fr       */
+/*   Updated: 2025/01/20 12:11:49 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,18 @@ void	push_smallest(t_stack *stack_a, t_stack *stack_b)
 	position = find_position(stack_a, smallest);
 	if (position <= (stack_a->size / 2))
 	{
-		while (position-- > 0)
+		while (position > 0)
 		{
 			ra(stack_a);
-			printf("After ra:\n");
-			print_stack(stack_a);
+			position--;
 		}
 	}
 	else
 	{
-		while (position++ < stack_a->size)
+		while (position < stack_a->size)
 		{
 			rra(stack_a);
-			printf("After rra:\n");
-			print_stack(stack_a);
+			position++;
 		}
 	}
 	pb(stack_a, stack_b);
