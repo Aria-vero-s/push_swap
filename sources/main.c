@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:06:14 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/20 21:18:02 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:23:50 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(int argc, char **argv)
 		sort_five(stack_a, stack_b);
 	else if (stack_a->size > 5)
 		radix_sort(stack_a, stack_b);
-	// print_stack(stack_a);
 	free_stack(stack_a);
 	free_stack(stack_b);
 	return (0);

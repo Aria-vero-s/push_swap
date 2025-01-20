@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   radix.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/20 21:22:03 by asaulnie          #+#    #+#             */
+/*   Updated: 2025/01/20 21:23:19 by asaulnie         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	values_to_array(t_stack *stack, int *values)
@@ -59,7 +71,7 @@ void	set_positions(t_stack *stack)
 			if (current->value == values[j])
 			{
 				current->index = j;
-				break;
+				break ;
 			}
 			j++;
 		}
@@ -96,4 +108,3 @@ void	radix_sort(t_stack *a, t_stack *b)
 		i++;
 	}
 }
-

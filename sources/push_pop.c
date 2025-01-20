@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 19:58:52 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 15:52:28 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:23:31 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,9 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
-void pb(t_stack *a, t_stack *b)
+void	pb(t_stack *a, t_stack *b)
 {
-	int value;
+	int	value;
 
 	if (a->size == 0)
 		return ;
@@ -58,7 +58,7 @@ void pb(t_stack *a, t_stack *b)
 	printf("pb\n");
 }
 
-void pa(t_stack *a, t_stack *b)
+void	pa(t_stack *a, t_stack *b)
 {
 	int	value;
 

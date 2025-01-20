@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 21:03:42 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:21:13 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ typedef struct s_stack
 }	t_stack;
 
 // input.c
-int			is_valid_int(char *str);
-t_stack		*init_stack(void);
-t_stack		*parse_input(int argc, char **argv);
-void		free_stack(t_stack *stack);
+int		is_valid_int(char *str);
+t_stack	*init_stack(void);
+t_stack	*parse_input(int argc, char **argv);
+void	free_stack(t_stack *stack);
 
 // push_pop.c
 void	push(t_stack *stack, int num);
@@ -49,7 +49,6 @@ void	pa(t_stack *a, t_stack *b);
 // utils.c
 void	error_exit(char *msg);
 void	check_if_duplicates(t_stack *stack_a);
-void	print_before(t_stack *stack_a);
 void	print_stack(t_stack *stack);
 
 // push_swap1.c

@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 12:38:31 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 21:21:53 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	sort_three(t_stack *stack)
 		rra(stack);
 }
 
-void sort_four_or_two(t_stack *a, t_stack *b)
+void	sort_four_or_two(t_stack *a, t_stack *b)
 {
 	if (a->size == 2)
 	{
