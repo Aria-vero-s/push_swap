@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.c                                            :+:      :+:    :+:   */
+/*   push_pop.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariane <ariane@student.42.fr>              +#+  +:+       +#+        */
+/*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/15 13:05:22 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/19 19:53:09 by ariane           ###   ########.fr       */
+/*   Created: 2025/01/18 19:58:52 by asaulnie          #+#    #+#             */
+/*   Updated: 2025/01/20 15:52:28 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack *stack, int value)
+void	push(t_stack *stack, int num)
 {
 	t_node	*new_node;
 
 	new_node = (t_node *)malloc(sizeof(t_node));
 	if (!new_node)
 		error_exit("Error: malloc() failed");
-	new_node->value = value;
+	new_node->value = num;
 	new_node->next = stack->node;
 	stack->node = new_node;
 	stack->size++;
@@ -28,16 +28,16 @@ void	push(t_stack *stack, int value)
 int	pop(t_stack *stack)
 {
 	t_node	*temp;
-	int		value;
+	int		num;
 
 	if (stack->size == 0)
 		error_exit("Error: empty stack");
 	temp = stack->node;
-	value = temp->value;
+	num = temp->value;
 	stack->node = temp->next;
 	free(temp);
 	stack->size--;
-	return (value);
+	return (num);
 }
 
 void	free_stack(t_stack *stack)
@@ -47,14 +47,24 @@ void	free_stack(t_stack *stack)
 	free(stack);
 }
 
-void	print_stack(t_stack *stack)
+void pb(t_stack *a, t_stack *b)
 {
-	t_node	*current;
+	int value;
 
-	current = stack->node;
-	while (current)
-	{
-		printf("%d\n", current->value);
-		current = current->next;
-	}
+	if (a->size == 0)
+		return ;
+	value = pop(a);
+	push(b, value);
+	printf("pb\n");
+}
+
+void pa(t_stack *a, t_stack *b)
+{
+	int	value;
+
+	if (b->size == 0)
+		return ;
+	value = pop(b);
+	push(a, value);
+	printf("pa\n");
 }

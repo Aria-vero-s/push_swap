@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 12:44:18 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/20 15:24:25 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,17 @@ t_stack		*init_stack(void);
 t_stack		*parse_input(int argc, char **argv);
 void		free_stack(t_stack *stack);
 
-// stack.c
-void	push(t_stack *stack, int value);
+// push_pop.c
+void	push(t_stack *stack, int num);
 int		pop(t_stack *stack);
-void	print_stack(t_stack *stack);
 void	free_stack(t_stack *stack);
-
-// operations.c
 void	pb(t_stack *stack_a, t_stack *stack_b);
 void	pa(t_stack *a, t_stack *b);
 
 // utils.c
 void	error_exit(char *msg);
 void	print_before(t_stack *stack_a);
+void	print_stack(t_stack *stack);
 
 // push_swap1.c
 void	sa(t_stack *stack);
@@ -61,7 +59,7 @@ void	sort_three(t_stack *stack);
 void	sort_four_or_two(t_stack *a, t_stack *b);
 
 // push_swap2.c
-int		find_smallest(t_stack *stack);
+int		find_smallest(t_stack *stack_a);
 int		find_position(t_stack *stack, int smallest);
 void	sort_five(t_stack *a, t_stack *b);
 void	push_smallest_to_b(t_stack *a, t_stack *b);
