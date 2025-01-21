@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 19:58:52 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 21:23:31 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:09:36 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	push(t_stack *stack, int num)
 
 	new_node = (t_node *)malloc(sizeof(t_node));
 	if (!new_node)
-		error_exit("Error: malloc() failed");
+		error_exit("Error\n");
 	new_node->value = num;
 	new_node->next = stack->node;
 	stack->node = new_node;
@@ -31,7 +31,7 @@ int	pop(t_stack *stack)
 	int		num;
 
 	if (stack->size == 0)
-		error_exit("Error: empty stack");
+		error_exit("Error\n");
 	temp = stack->node;
 	num = temp->value;
 	stack->node = temp->next;
@@ -55,7 +55,7 @@ void	pb(t_stack *a, t_stack *b)
 		return ;
 	value = pop(a);
 	push(b, value);
-	printf("pb\n");
+	ft_printf("pb\n");
 }
 
 void	pa(t_stack *a, t_stack *b)
@@ -66,5 +66,5 @@ void	pa(t_stack *a, t_stack *b)
 		return ;
 	value = pop(b);
 	push(a, value);
-	printf("pa\n");
+	ft_printf("pa\n");
 }

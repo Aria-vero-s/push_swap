@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/20 21:19:37 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:09:44 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	error_exit(char *msg)
 {
-	printf("%s\n", msg);
-	exit (1);
+	ft_printf("%s\n", msg);
+	exit (0);
 }
 
-void	check_if_duplicates(t_stack *stack_a)
+void	check_if_duplicates(t_stack *stack_a, t_stack *stack_b)
 {
 	t_node	*current;
 	t_node	*temp;
@@ -30,7 +30,11 @@ void	check_if_duplicates(t_stack *stack_a)
 		while (current)
 		{
 			if (temp->value == current->value)
-				error_exit("error: duplicates found");
+			{
+				free_stack(stack_a);
+				free_stack(stack_b);
+				error_exit("Error\n");
+			}
 			current = current->next;
 		}
 		temp = temp->next;
@@ -44,7 +48,19 @@ void	print_stack(t_stack *stack)
 	current = stack->node;
 	while (current)
 	{
-		printf("%d\n", current->value);
+		ft_printf("%d\n", current->value);
 		current = current->next;
+	}
+}
+
+void	print_values(int *values, int size)
+{
+	int	i;
+
+	i = 0;
+	while (i < size)
+	{
+		ft_printf("%d\n", values[i]);
+		i++;
 	}
 }

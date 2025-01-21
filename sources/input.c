@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/20 15:16:03 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:32:03 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_stack	*init_stack(void)
 
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (!stack)
-		error_exit("Error: malloc() failed");
+		error_exit("Error\n");
 	stack->node = NULL;
 	stack->size = 0;
 	return (stack);
@@ -60,8 +60,8 @@ t_stack	*parse_input(int argc, char **argv)
 	while (i > 0)
 	{
 		if (!is_valid_int(argv[i]))
-			error_exit("Error: invalid argument(s)");
-		push(stack, atoi(argv[i]));
+			error_exit("Error\n");
+		push(stack, ft_atoi(argv[i]));
 		i--;
 	}
 	return (stack);

@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 21:22:03 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 21:23:19 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 17:41:06 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	set_positions(t_stack *stack)
 
 	values = malloc(stack->size * sizeof(int));
 	if (!values)
-		exit(1);
+		error_exit ("Error\n");
 	values_to_array(stack, values);
 	sort_values(values, stack->size);
 	current = stack->node;
@@ -80,7 +80,7 @@ void	set_positions(t_stack *stack)
 	free(values);
 }
 
-void	radix_sort(t_stack *a, t_stack *b)
+void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 {
 	int	max_bits;
 	int	max_index;
@@ -88,23 +88,23 @@ void	radix_sort(t_stack *a, t_stack *b)
 	int	size;
 
 	max_bits = 0;
-	max_index = a->size - 1;
+	max_index = stack_a->size - 1;
 	while ((max_index >> max_bits) != 0)
 		max_bits++;
-	set_positions(a);
+	set_positions(stack_a);
 	i = 0;
 	while (i < max_bits)
 	{
-		size = a->size;
+		size = stack_a->size;
 		while (size-- > 0)
 		{
-			if (((a->node->index >> i) & 1) == 1)
-				ra(a);
+			if (((stack_a->node->index >> i) & 1) == 1)
+				ra(stack_a);
 			else
-				pb(a, b);
+				pb(stack_a, stack_b);
 		}
-		while (b->size > 0)
-			pa(a, b);
+		while (stack_b->size > 0)
+			pa(stack_a, stack_b);
 		i++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 12:30:10 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 15:39:57 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 15:59:08 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,11 @@ void	push_smallest_to_b(t_stack *stack_a, t_stack *stack_b)
 	pb(stack_a, stack_b);
 }
 
-void	sort_five(t_stack *a, t_stack *b)
+void	sort_five(t_stack *stack_a, t_stack *stack_b)
 {
-	push_smallest_to_b(a, b);
-	push_smallest_to_b(a, b);
-	sort_three(a);
-	pa(a, b);
-	pa(a, b);
+	push_smallest_to_b(stack_a, stack_b);
+	push_smallest_to_b(stack_a, stack_b);
+	sort_three(stack_a);
+	pa(stack_a, stack_b);
+	pa(stack_a, stack_b);
 }

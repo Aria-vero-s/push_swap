@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:59:16 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 21:21:53 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:09:40 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	sa(t_stack *stack)
 	first->next = second->next;
 	second->next = first;
 	stack->node = second;
-	printf("sa\n");
+	ft_printf("sa\n");
 }
 
 void	ra(t_stack *stack)
@@ -41,7 +41,7 @@ void	ra(t_stack *stack)
 	stack->node = first->next;
 	first->next = NULL;
 	last->next = first;
-	printf("ra\n");
+	ft_printf("ra\n");
 }
 
 void	rra(t_stack *stack)
@@ -61,7 +61,7 @@ void	rra(t_stack *stack)
 	second_last->next = NULL;
 	last->next = stack->node;
 	stack->node = last;
-	printf("rra\n");
+	ft_printf("rra\n");
 }
 
 void	sort_three(t_stack *stack)
@@ -91,17 +91,17 @@ void	sort_three(t_stack *stack)
 		rra(stack);
 }
 
-void	sort_four_or_two(t_stack *a, t_stack *b)
+void	sort_four_or_two(t_stack *stack_a, t_stack *stack_b)
 {
-	if (a->size == 2)
+	if (stack_a->size == 2)
 	{
-		if ((a->node->value) > (a->node->next->value))
-			sa(a);
+		if ((stack_a->node->value) > (stack_a->node->next->value))
+			sa(stack_a);
 	}
-	else if (a->size == 4)
+	else if (stack_a->size == 4)
 	{
-		push_smallest_to_b(a, b);
-		sort_three(a);
-		pa(a, b);
+		push_smallest_to_b(stack_a, stack_b);
+		sort_three(stack_a);
+		pa(stack_a, stack_b);
 	}
 }

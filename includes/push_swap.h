@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/20 21:21:13 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/01/21 18:37:49 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include "../libft/libft.h"
+# include "../ft_printf/ft_printf.h"
 
 typedef struct s_node
 {
@@ -48,24 +50,25 @@ void	pa(t_stack *a, t_stack *b);
 
 // utils.c
 void	error_exit(char *msg);
-void	check_if_duplicates(t_stack *stack_a);
+void	check_if_duplicates(t_stack *stack_a, t_stack *stack_b);
 void	print_stack(t_stack *stack);
+void	print_values(int *values, int size);
 
 // push_swap1.c
 void	sa(t_stack *stack);
 void	ra(t_stack *stack);
 void	rra(t_stack *stack);
 void	sort_three(t_stack *stack);
-void	sort_four_or_two(t_stack *a, t_stack *b);
+void	sort_four_or_two(t_stack *stack_a, t_stack *stack_b);
 
 // push_swap2.c
 int		find_smallest(t_stack *stack_a);
 int		find_position(t_stack *stack, int smallest);
-void	sort_five(t_stack *a, t_stack *b);
-void	push_smallest_to_b(t_stack *a, t_stack *b);
+void	sort_five(t_stack *stack_a, t_stack *stack_b);
+void	push_smallest_to_b(t_stack *stack_a, t_stack *stack_b);
 
 // radix.c
-void	radix_sort(t_stack *a, t_stack *b);
+void	radix_sort(t_stack *stack_a, t_stack *stack_b);
 void	set_positions(t_stack *stack);
 void	sort_values(int *values, int size);
 void	values_to_array(t_stack *stack, int *values);
