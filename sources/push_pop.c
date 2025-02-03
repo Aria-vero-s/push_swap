@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 19:58:52 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/21 18:09:36 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/03 15:57:03 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	push(t_stack *stack, int num)
 	if (!new_node)
 		error_exit("Error\n");
 	new_node->value = num;
+	new_node->index = 0;
 	new_node->next = stack->node;
 	stack->node = new_node;
 	stack->size++;

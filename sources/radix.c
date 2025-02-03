@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 21:22:03 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/01/21 17:41:06 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/03 15:40:16 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,8 +98,9 @@ void	radix_sort(t_stack *stack_a, t_stack *stack_b)
 		size = stack_a->size;
 		while (size-- > 0)
 		{
+			// printf("index value : %d\n", stack_a->node->index);
 			if (((stack_a->node->index >> i) & 1) == 1)
-				ra(stack_a);
+					ra(stack_a);
 			else
 				pb(stack_a, stack_b);
 		}

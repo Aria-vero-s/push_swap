@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/01/21 18:09:44 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/03 15:31:56 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_exit(char *msg)
 {
-	ft_printf("%s\n", msg);
+	ft_printf("%s", msg);
 	exit (0);
 }
 
