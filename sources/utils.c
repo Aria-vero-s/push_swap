@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/02/12 02:20:53 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/15 22:39:36 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	error_exit(char *msg)
 {
-	ft_printf("%s", msg);
-	exit (0);
+	write(2, msg, strlen(msg));
+	exit(1);
 }
 
 void	check_if_duplicates(t_stack *stack_a, t_stack *stack_b)

@@ -6,34 +6,47 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/02/12 22:23:53 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/15 22:39:27 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int	handle_sign(char *str, int *i)
+{
+	int	sign;
+
+	sign = 1;
+	if (str[*i] == '-' || str[*i] == '+')
+	{
+		if (str[*i] == '-')
+			sign = -1;
+		(*i)++;
+	}
+	return (sign);
+}
+
 int	is_valid_int(char *str)
 {
 	long	num;
 	int		sign;
+	int		i;
 
+	i = 0;
 	num = 0;
-	sign = 1;
-	if (*str == '-')
+	if (!str || str[i] == '\0')
+		return (0);
+	sign = handle_sign(str, &i);
+	if (str[i] == '\0')
+		return (0);
+	while (str[i])
 	{
-		sign = -1;
-		str++;
-	}
-	else if (*str == '+')
-		str++;
-	while (*str)
-	{
-		if (*str < '0' || *str > '9')
+		if (str[i] < '0' || str[i] > '9')
 			return (0);
-		num = num * 10 + (*str - '0');
-		if (num * sign > INT_MAX || num * sign < INT_MIN)
+		num = num * 10 + (str[i] - '0');
+		if ((num * sign) > INT_MAX || (num * sign) < INT_MIN)
 			return (0);
-		str++;
+		i++;
 	}
 	return (1);
 }
