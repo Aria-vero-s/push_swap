@@ -6,24 +6,22 @@
 #    By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 22:28:15 by ariane            #+#    #+#              #
-#    Updated: 2025/02/18 19:54:45 by asaulnie         ###   ########.fr        #
+#    Updated: 2025/02/18 21:03:22 by asaulnie         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
 CC = gcc -g
-CFLAGS = -Wall -Wextra -Werror -ggdb3
+CFLAGS = -Wall -Wextra -Werror
 
 INCLUDES = -Iincludes
 
 LIBFT_DIR = libft
 LIBFT_LIB = $(LIBFT_DIR)/libft.a
-LIBFT_INC = -I $(LIBFT_DIR)
 
 FT_PRINTF_DIR = ft_printf
 FT_PRINTF_LIB = $(FT_PRINTF_DIR)/libftprintf.a
-FT_PRINTF_INC = -I $(FT_PRINTF_DIR)
 
 SRCS = sources/checks.c \
 		sources/input.c \

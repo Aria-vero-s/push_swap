@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:04:44 by ariane            #+#    #+#             */
-/*   Updated: 2025/02/18 19:45:16 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/18 20:37:33 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,5 +97,6 @@ void	parse_input(int argc, char **argv, t_stack *stack)
 		exit(0);
 	if (argc == 2)
 		parse_single_arg(argv[1], stack);
-	parse_multiple_args(argc, argv, stack);
+	else
+		parse_multiple_args(argc, argv, stack);
 }
