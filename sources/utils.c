@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 13:05:55 by ariane            #+#    #+#             */
-/*   Updated: 2025/02/18 19:51:25 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:02:08 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,5 @@ void	reindex(t_stack *stack)
 			current = current->next;
 		}
 		base = base->next;
-	}
-}
-
-void	print_stack(t_stack *stack)
-{
-	t_node	*current;
-
-	current = stack->head;
-	while (current)
-	{
-		ft_printf("%d   -   %d\n", current->index, current->value);
-		current = current->next;
 	}
 }

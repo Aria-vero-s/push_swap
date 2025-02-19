@@ -6,7 +6,7 @@
 /*   By: asaulnie <asaulnie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 12:07:22 by asaulnie          #+#    #+#             */
-/*   Updated: 2025/02/18 21:23:52 by asaulnie         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:02:12 by asaulnie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,5 @@ void		sort_five(t_stack *stack_a, t_stack *stack_b);
 void		error_exit(char *msg);
 void		free_stack(t_stack *stack);
 void		reindex(t_stack *stack);
-void		print_stack(t_stack *stack);
 
 #endif
